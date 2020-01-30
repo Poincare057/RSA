@@ -5,11 +5,9 @@ def solvemod(N, n):
 		if (N*i % n == 1):
 			return i
 	return 0
-def decrypt(x,p,q):
+def decrypt(x, p, q):
 	xp = x%p
 	xq = x%q
-	np = q
-	nq = p
-	ap = solvemod(np, p)
-	aq = solvemod(nq, q)
-	return xq*ap*nq + xp*aq*np
+	ap = solvemod(q,p)
+	aq = solvemod(p,q)
+	return (xp*q*ap + xq*p*aq)
