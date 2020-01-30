@@ -1,5 +1,5 @@
 def encrypt(x, n):
-	return (x**3 % n)
+	return (x % n)
 def solvemod(N, n):
 	for i in range(n):
 		if (N*i % n == 1):
