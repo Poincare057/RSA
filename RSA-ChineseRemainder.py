@@ -14,7 +14,9 @@ def decrypt(x, p, q):
 	aq = solvemod(p,q)
 	return (xp*q*ap + xq*p*aq)
 
-#Euler's theorem
+#Euler's theorem;
+def encrypt(x, n, e):
+	return (x**e)%n
 def decrypt(x, p, q, e):
 	d = solvemod(e, (p-1)*(q-1))
 	return (x**d)%(p*q)
