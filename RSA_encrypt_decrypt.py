@@ -20,7 +20,7 @@ def solvemod(N, n):
     return 0
 
 def encrypt(x, n, e):
-    return fastmodexp(x, 5, n)
+    return fastmodexp(x, e, n)
 
 def decrypt(x, p, q, e):
 	d = solvemod(e, (p-1)*(q-1))
